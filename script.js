@@ -8,7 +8,7 @@ const daysRemaining = (holiday) => {
   return parseInt((holiday - todaysDate) / (24 * 3600 * 1000));
 };
 
-// takes the holiday date and a string representing the holiday name, returning a li element with days remaining from todays date until the holiday
+// takes the holiday date and a string representing the holiday name, returning an li element with days remaining from todays date until the holiday
 const getDifference = (holiday, holName) => {
   return `<li> ${daysRemaining(
     holiday
@@ -16,7 +16,8 @@ const getDifference = (holiday, holName) => {
 };
 
 $('#trigger').click(function () {
-  $('#days-until').append(getDifference(christmas, 'Christmas'));
-  $('#days-until').append(getDifference(newYear, 'New Year'));
-  $('#days-until').append(getDifference(valentines, 'Valentines Day'));
+  $('#days-until')
+    .append(getDifference(christmas, 'Christmas'))
+    .append(getDifference(newYear, 'New Year'))
+    .append(getDifference(valentines, 'Valentines Day'));
 });
