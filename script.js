@@ -14,8 +14,13 @@ const getDifference = (holiday, holName) => {
 };
 
 $('#trigger').click(function () {
-  $('#days-until')
-    .append(getDifference(christmas, 'Christmas'))
-    .append(getDifference(newYear, 'New Year'))
-    .append(getDifference(valentines, 'Valentines Day'));
+  $('#days-until').append(getDifference(christmas, 'Christmas'));
+});
+
+$('#trigger').click(function () {
+  $('#days-until').append(getDifference(newYear, 'New Year'));
+});
+
+$('#trigger').click(function () {
+  $('#days-until').append(getDifference(valentines, 'Valentines Day'));
 });
