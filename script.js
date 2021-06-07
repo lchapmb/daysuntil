@@ -1,4 +1,7 @@
 const todaysDate = new Date();
+const christmas = new Date(2021, 12, 25);
+const newYears = new Date(2022, 01, 01);
+const valentines = new Date(2022, 02, 14);
 
 // takes the holiday and subtracts todays date, returning parsed integer
 const daysRemaining = (holiday) => {
@@ -13,19 +16,16 @@ const getDifference = (holiday, holName) => {
 };
 
 $('#trigger').click(function () {
-  const christmas = new Date(2021, 12, 25);
   $('#days-until').append(getDifference(christmas, 'Christmas'));
 });
 
 $('#trigger').click(function () {
-  const newYears = new Date(2022, 01, 01);
   $('#days-until').append(
     '<li>' + daysRemaining(newYears).toString() + ' days until New Year</li>'
   );
 });
 
 $('#trigger').click(function () {
-  const valentines = new Date(2022, 02, 14);
   $('#days-until').append(
     '<li>' +
       daysRemaining(valentines).toString() +
