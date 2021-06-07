@@ -1,3 +1,3 @@
 # daysuntil
 
-Repo for Sysdoc tech test.
+Repo for tech test.
